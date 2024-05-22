@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="2dp"
+        android:color="#868E96" /> <!-- 외곽선의 두께와 색상을 설정합니다. -->
+    <corners
+        android:radius="8dp" /> <!-- 외곽선의 꼭지점을 둥글게 만듭니다. -->
+</shape>

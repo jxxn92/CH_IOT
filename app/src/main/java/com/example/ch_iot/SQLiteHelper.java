@@ -32,12 +32,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 "Age INTEGER, " +
                 "Gender TEXT, " +
                 "DrinkCnt INTEGER, " +
-                "AlcoholContent REAL, " +
-                "SaveTime TEXT)";
+                "Weight INTEGER, " +
+                "AlcoholContent REAL)";
+//                "SaveTime TEXT)";
 
         db.execSQL(SQL);
-//        String SQL = "CREATE TABLE users (UID integer primary key autoincrement, Name text);";
-
 
     }
 
@@ -54,7 +53,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.insert("users", null, values);
     }
 
-    public void insertAll(String name, String birthPass, int age, String gender, int drinkCnt, double alcoholContent, String date) {
+    public void insertAll(String name, String birthPass, int age, String gender, int drinkCnt, int weight ,double alcoholContent) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -63,13 +62,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         values.put("Age", age);
         values.put("Gender", gender);
         values.put("DrinkCnt", drinkCnt);
+        values.put("Weight", weight);
         values.put("AlcoholContent", alcoholContent);
-        values.put("SaveTime", date);
+//        values.put("SaveTime", date);
 
         db.insert("users", null, values);
-//        String SQL = "INSERT INTO users(Name, BirthPass, Age, Gender, DrinkCnt, AlcoholContent, SaveTime) VALUES('" + name + birthPass + age + gender + drinkCnt + alcoholContent + date + "')";
 
-//        db.execSQL(SQL);
     }
 
 //    public String selectName(String name) {
@@ -128,8 +126,9 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                     rowData.put("Age", result.getString(result.getColumnIndex("Age")));
                     rowData.put("Gender", result.getString(result.getColumnIndex("Gender")));
                     rowData.put("DrinkCnt", result.getString(result.getColumnIndex("DrinkCnt")));
+                    rowData.put("Weight", result.getString(result.getColumnIndex("Weight")));
                     rowData.put("AlcoholContent", result.getString(result.getColumnIndex("AlcoholContent")));
-                    rowData.put("SaveTime", result.getString(result.getColumnIndex("SaveTime")));
+//                    rowData.put("SaveTime", result.getString(result.getColumnIndex("SaveTime")));
 
                     rowDataList.add(rowData);
                 } while (result.moveToNext());
@@ -141,7 +140,54 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         }
 
         return rowDataList;
-}
+    }
+
+    public List<Map<String, String>> selectId(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String SQL = "SELECT * FROM users WHERE UID='" + id + "'";
+        Cursor result = db.rawQuery(SQL, null);
+
+        List<Map<String, String>> rowDataList = new ArrayList<>();
+        try {
+            if (result != null && result.moveToFirst()) {
+                do {
+                    Map<String, String> rowData = new HashMap<>();
+                    rowData.put("UID", result.getString(result.getColumnIndex("UID")));
+                    rowData.put("Name", result.getString(result.getColumnIndex("Name")));
+                    rowData.put("BirthPass", result.getString(result.getColumnIndex("BirthPass")));
+                    rowData.put("Age", result.getString(result.getColumnIndex("Age")));
+                    rowData.put("Gender", result.getString(result.getColumnIndex("Gender")));
+                    rowData.put("DrinkCnt", result.getString(result.getColumnIndex("DrinkCnt")));
+                    rowData.put("Weight", result.getString(result.getColumnIndex("Weight")));
+                    rowData.put("AlcoholContent", result.getString(result.getColumnIndex("AlcoholContent")));
+//                    rowData.put("SaveTime", result.getString(result.getColumnIndex("SaveTime")));
+
+                    rowDataList.add(rowData);
+                } while (result.moveToNext());
+            }
+        } finally {
+            if (result != null) {
+                result.close();
+            }
+        }
+
+        return rowDataList;
+    }
+
+    public void updateData(String id, String name, String birthPass, int age, String gender, int drinkCnt, int weight, double alcoholContent) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("UID", id);
+        contentValues.put("Name", name);
+        contentValues.put("BirthPass", birthPass);
+        contentValues.put("Age", age);
+        contentValues.put("Gender", gender);
+        contentValues.put("DrinkCnt", drinkCnt);
+        contentValues.put("Weight", weight);
+        contentValues.put("AlcoholContent", alcoholContent);
+
+        db.update("users", contentValues,"UID = ?", new String[]{id});
+    }
 
 
 }

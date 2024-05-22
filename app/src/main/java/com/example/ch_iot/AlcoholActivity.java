@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -56,9 +58,20 @@ public class AlcoholActivity extends AppCompatActivity {
     double maxAlcoholContent = -1.00;
     double alcoholContent = 0.00;
 
+    private String loginUser;
+
     String alcoholContentStr = "";
     LinearLayout back;
 
+    LinearLayout btnBack;
+
+    LinearLayout btn1;
+    LinearLayout btn2;
+    LinearLayout btn3;
+
+//    ConstraintLayout back2;
+
+//    private TextView over;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +86,11 @@ public class AlcoholActivity extends AppCompatActivity {
         back = findViewById(R.id.background);
         nowState = findViewById(R.id.nowState);
         textviewEval = findViewById(R.id.state_eval);
+
+        btnBack = findViewById(R.id.btn_back);
+        btn1 = findViewById(R.id.button1);
+        btn2 = findViewById(R.id.button2);
+        btn3 = findViewById(R.id.button3);
 
         String deviceName = null;
 
@@ -95,7 +113,8 @@ public class AlcoholActivity extends AppCompatActivity {
 
         }
 
-
+        Intent intent = getIntent();
+        loginUser = intent.getStringExtra("name");
     }
 
     public void selectBluetoothDevice() {
@@ -169,9 +188,13 @@ public class AlcoholActivity extends AppCompatActivity {
         back.setBackgroundResource(R.drawable.gradient_none);
         nowState.setImageResource(R.drawable.none);
         nowState.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        textviewAlcoholText.setVisibility(View.VISIBLE);
+        btnBack.setVisibility(View.VISIBLE);
         textviewState.setText("");
         textviewEval.setText("");
         textviewAlcoholText.setText("0.00");
+
+//        over.setVisibility(View.VISIBLE);
     }
 
     public void receiveData() {
@@ -205,7 +228,6 @@ public class AlcoholActivity extends AppCompatActivity {
                                                 maxAlcoholContent = alcoholContent;
                                             }
 
-                                            // Test
                                             textviewAlcoholText.setText(alcoholContentStr);
 
                                             // 0.00
@@ -251,6 +273,24 @@ public class AlcoholActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btn1.setOnClickListener(v -> {
+            Intent intent1 = new Intent(AlcoholActivity.this, InfoActivity.class);
+            intent1.putExtra("maxAlcohol", maxAlcoholContent);
+            startActivity(intent1);
+        });
+
+        btn2.setOnClickListener(v -> {
+            Intent intent2 = new Intent(AlcoholActivity.this, StatisActivity.class);
+            startActivity(intent2);
+        });
+
+//        btn3.setOnClickListener(v -> {
+//            Intent intent3 = new Intent(AlcoholActivity.this, RegisterActivity.class);
+//            startActivity(intent3);
+//        });
+
         workerThread.start();
+
     }
 }

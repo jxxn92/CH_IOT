@@ -22,6 +22,7 @@ import java.util.Map;
 
 public class InfoActivity extends AppCompatActivity {
 
+    private static double ALCOHOL_CONSTANT = 0.010;
     private String userName;
     private int age;
     private int weight;
@@ -115,13 +116,15 @@ public class InfoActivity extends AppCompatActivity {
 
                 pass.setText(String.valueOf(timePass));
                 maxAlcohol.setText(String.valueOf(maxAlcoholCon));
-                breakTime.setText(hours + "시간 ");
-                breakMinuit.setText(minuit + "분");
 
                 if (nowAlcoholCon < 0.00) {
                     nowAlcohol.setText("0.00");
+                    breakTime.setText("0 시간 ");
+                    breakMinuit.setText("0분");
                 } else {
                     nowAlcohol.setText(String.valueOf(nowAlcoholCon));
+                    breakTime.setText(hours + "시간 ");
+                    breakMinuit.setText(minuit + "분");
                 }
 
                 noBtn.setOnClickListener(new View.OnClickListener() {
@@ -188,10 +191,15 @@ public class InfoActivity extends AppCompatActivity {
 
         double maxAlcoholCon = Math.round((drinkAlcohol / weightVal) * 1000) / 1000.0;
         // 상수 고민 0.03 0.015 0.008
-        double nowAlcoholCon = Math.round((maxAlcoholCon - (0.008 * timePass)) * 1000) / 1000.0;
+        double nowAlcoholCon = Math.round((maxAlcoholCon - (ALCOHOL_CONSTANT * timePass)) * 1000) / 1000.0;
 
-        int hours = (int) (nowAlcoholCon / 0.008);
-        int minutes = (int) (((nowAlcoholCon / 0.008) - hours) * 60);
+        SharedPreferences sharedPreferences = getSharedPreferences("CalPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putFloat("cal", (float) nowAlcoholCon);
+        editor.apply();
+
+        int hours = (int) (nowAlcoholCon / ALCOHOL_CONSTANT);
+        int minutes = (int) (((nowAlcoholCon / ALCOHOL_CONSTANT) - hours) * 60);
 
         Log.d("tag" , "maxAlcoholCon : " + maxAlcoholCon + " , nowAlcoholCon : " + nowAlcoholCon);
         Log.d("tag" , "hours : " + hours + " , minutes : " + minutes);

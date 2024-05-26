@@ -18,6 +18,18 @@
         android:theme="@style/Theme.CH_IOT"
         tools:targetApi="31">
         <activity
+            android:name=".ViewActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ViewActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".AdditionalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TempActivity"
+            android:exported="true" />
+        <activity
             android:name=".InfoActivity"
             android:exported="true" />
         <activity

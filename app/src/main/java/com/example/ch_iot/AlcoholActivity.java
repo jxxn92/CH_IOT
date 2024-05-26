@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,7 +56,7 @@ public class AlcoholActivity extends AppCompatActivity {
 
     boolean connectStatus;
     int pairedDeviceCount;
-    double maxAlcoholContent = -1.00;
+    double maxAlcoholContent = 0.00;
     double alcoholContent = 0.00;
 
     private String loginUser;
@@ -274,6 +275,7 @@ public class AlcoholActivity extends AppCompatActivity {
             }
         });
 
+
         btn1.setOnClickListener(v -> {
             Intent intent1 = new Intent(AlcoholActivity.this, InfoActivity.class);
             intent1.putExtra("maxAlcohol", maxAlcoholContent);
@@ -281,14 +283,18 @@ public class AlcoholActivity extends AppCompatActivity {
         });
 
         btn2.setOnClickListener(v -> {
-            Intent intent2 = new Intent(AlcoholActivity.this, StatisActivity.class);
+            Intent intent2 = new Intent(AlcoholActivity.this, TempActivity.class);
             startActivity(intent2);
         });
 
-//        btn3.setOnClickListener(v -> {
-//            Intent intent3 = new Intent(AlcoholActivity.this, RegisterActivity.class);
-//            startActivity(intent3);
-//        });
+        btn3.setOnClickListener(v -> {
+            SharedPreferences sharedPreferences = getSharedPreferences("AlcoholPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putFloat("alcohol", (float) maxAlcoholContent);
+            editor.apply();
+            Intent intent3 = new Intent(AlcoholActivity.this, AdditionalActivity.class);
+            startActivity(intent3);
+        });
 
         workerThread.start();
 

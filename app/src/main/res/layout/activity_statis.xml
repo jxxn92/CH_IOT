@@ -12,7 +12,6 @@
         android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
-
         <Button
             android:id="@+id/statis_btn1"
             android:layout_width="0dp"
@@ -50,10 +49,101 @@
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/statis_chart"
+        android:layout_width="match_parent"
+        android:layout_height="378dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/statis_layout_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:visibility="gone"
         android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statis_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="테스트"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/statis_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="님은 술자리에서 평균 약 "
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/statis_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="n"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/statis_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="잔의 술을 마시며"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statis_layout_text2"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="horizontal"
         android:layout_marginBottom="50dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="이것은 전체에서 약"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/statis_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="n%"
+            android:fontFamily="@font/bmju"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text="에 해당하는 비율입니다."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 </LinearLayout>
+

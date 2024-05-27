@@ -149,7 +149,6 @@ public class InfoActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     private boolean isInputValid() {
@@ -190,7 +189,7 @@ public class InfoActivity extends AppCompatActivity {
         }
 
         double maxAlcoholCon = Math.round((drinkAlcohol / weightVal) * 1000) / 1000.0;
-        // 상수 고민 0.03 0.015 0.008
+        // 상수 고민 0.03 0.015 0.008 => 0.010
         double nowAlcoholCon = Math.round((maxAlcoholCon - (ALCOHOL_CONSTANT * timePass)) * 1000) / 1000.0;
 
         SharedPreferences sharedPreferences = getSharedPreferences("CalPrefs", MODE_PRIVATE);

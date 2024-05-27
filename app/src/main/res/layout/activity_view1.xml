@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bmju"
-            android:text="소량의 음주라도 고혈압, 암을 유발할 수 있으며, 과도한 음주는 간질환, 관상동맥, 심장질환 및 뇌졸중 위험을 높입니다."
+            android:text="소량의 음주라도 고혈압, 암을 유발할 수 있으며, 과도한 음주는 간질환, 심장질환 및 뇌졸중 위험을 높입니다."
             android:textSize="18sp"
             android:layout_marginTop="8dp" />
 
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bmju"
-            android:text="알코올 금단 증후군의 증상은 가슴 두근거림, 식은땀, 손 떨림, 메스꺼움, 구토 등이입니다."
+            android:text="알코올 금단 증후군의 증상은 가슴 두근거림, 식은땀, 손 떨림, 메스꺼움, 구토등이 있습니다."
             android:textSize="18sp"
             android:layout_marginTop="7dp" />
 
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bmju"
-            android:text="심한 경우 환각, 경련, 금단 섬망(정신 상태의 혼란, 환각 등이 동반되는 응급 상태) 등 인지 기능 장애 및 사망에까지 이릅니다."
+            android:text="심한 경우 환각, 경련, 금단 섬망(정신 상태의 혼란) 등 인지 기능 장애 및 사망에까지 이릅니다."
             android:textSize="18sp"
             android:layout_marginTop="8dp" />
     </LinearLayout>

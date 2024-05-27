@@ -124,6 +124,14 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bmju"
+            android:text=" 약 "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/alert_text_breakdown_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

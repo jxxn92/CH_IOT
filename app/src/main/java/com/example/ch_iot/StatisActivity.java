@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,11 +28,19 @@ public class StatisActivity extends AppCompatActivity {
     private int frequency; // 음주 빈도
     private int average; // 평균 주량
     private String gender;
+    private String name;
 
     private Button statisBtn1;
     private Button statisBtn2;
     private TextView statisText;
+    private TextView statisLabel1;
+    private TextView statisLabel2;
+    private LinearLayout statisLayout1;
+    private LinearLayout statisLayout2;
+    private TextView statisLabelName;
     private LineChart statisLineChart;
+    private TextView statisText1;
+    private TextView statisText2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,27 +51,97 @@ public class StatisActivity extends AppCompatActivity {
         statisBtn1 = findViewById(R.id.statis_btn1);
         statisBtn2 = findViewById(R.id.statis_btn2);
         statisText = findViewById(R.id.statis_text);
+        statisLabelName = findViewById(R.id.statis_name);
         statisLineChart = findViewById(R.id.statis_chart);
+        statisLayout1 = findViewById(R.id.statis_layout_text1);
+        statisLayout2 = findViewById(R.id.statis_layout_text2);
+        statisLabel1 = findViewById(R.id.statis_label1);
+        statisLabel2 = findViewById(R.id.statis_label2);
+        statisText1 = findViewById(R.id.statis_text_1);
+        statisText2 = findViewById(R.id.statis_text_2);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("TempPrefs", MODE_PRIVATE);
-        gender = sharedPreferences.getString("gender", null);
-        frequency = sharedPreferences.getInt("fre", 0);
-        average = sharedPreferences.getInt("aver", 0);
+        SharedPreferences sharedPreferences1 = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        name = sharedPreferences1.getString("userName", null);
+
+        SharedPreferences sharedPreferences2 = getSharedPreferences("TempPrefs", MODE_PRIVATE);
+        gender = sharedPreferences2.getString("gender", null);
+        frequency = sharedPreferences2.getInt("fre", 0);
+        average = sharedPreferences2.getInt("aver", 0);
 
         statisBtn1.setOnClickListener(v -> {
             statisLineChart.setVisibility(View.VISIBLE);
             statisLineChart.invalidate();
             setBtn1(gender, average);
+            statisLayout1.setVisibility(View.VISIBLE);
+            statisLabelName.setText(name);
+            statisLabel1.setText(String.valueOf(average));
+            statisLayout2.setVisibility(View.VISIBLE);
+
+            if (gender.equals("남")) {
+                if (average <= 2) {
+                    statisLabel2.setText(String.valueOf(14.9)+"%");
+                } else if (average <= 4) {
+                    statisLabel2.setText(String.valueOf(26.2)+"%");
+                } else if (average <= 6) {
+                    statisLabel2.setText(String.valueOf(21.3)+"%");
+                } else if (average <= 9) {
+                    statisLabel2.setText(String.valueOf(17.9)+"%");
+                } else {
+                    statisLabel2.setText(String.valueOf(19.8)+"%");
+                }
+            } else if (gender.equals("여")) {
+                if (average <= 2) {
+                    statisLabel2.setText(String.valueOf(30.6)+"%");
+                } else if (average <= 4) {
+                    statisLabel2.setText(String.valueOf(30.2)+"%");
+                } else if (average <= 6) {
+                    statisLabel2.setText(String.valueOf(17.4)+"%");
+                } else if (average <= 9) {
+                    statisLabel2.setText(String.valueOf(10.6)+"%");
+                } else {
+                    statisLabel2.setText(String.valueOf(11.2)+"%");
+                }
+            }
         });
 
         statisBtn2.setOnClickListener(v -> {
             statisLineChart.setVisibility(View.VISIBLE);
             statisLineChart.invalidate();
             setBtn2(gender, frequency);
+            statisLayout1.setVisibility(View.VISIBLE);
+            statisText1.setText("님은 한달에 평균 약 ");
+            statisText2.setText("번의 술자리를 가지며");
+            statisLabelName.setText(name);
+            statisLabel1.setText(String.valueOf(frequency));
+            statisLayout2.setVisibility(View.VISIBLE);
+
+            if (gender.equals("남")) {
+                if (frequency == 0) {
+                    statisLabel2.setText(String.valueOf(18.1) + "%");
+                } else if (frequency <= 1) {
+                    statisLabel2.setText(String.valueOf(29.5) + "%");
+                } else if (frequency <= 3) {
+                    statisLabel2.setText(String.valueOf(30.9) + "%");
+                } else if (frequency < 5) {
+                    statisLabel2.setText(String.valueOf(20.2) + "%");
+                } else {
+                    statisLabel2.setText(String.valueOf(1.3) + "%");
+                }
+            } else if (gender.equals("여")) {
+                if (frequency == 0) {
+                    statisLabel2.setText(String.valueOf(24.7) + "%");
+                } else if (frequency <= 1) {
+                    statisLabel2.setText(String.valueOf(33.5) + "%");
+                } else if (frequency <= 3) {
+                    statisLabel2.setText(String.valueOf(26.9) + "%");
+                } else if (frequency < 5) {
+                    statisLabel2.setText(String.valueOf(13.8) + "%");
+                } else {
+                    statisLabel2.setText(String.valueOf(1.1) + "%");
+                }
+            }
         });
-
     }
-
     public void setBtn1(String gender, int average) { // 음주 정도
         statisText.setText("음주 정도 통계");
 
@@ -209,7 +288,7 @@ public class StatisActivity extends AppCompatActivity {
                 temp.add(new Entry(1F, 29.5F));
             } else if (frequency <= 3) {
                 temp.add(new Entry(2F, 30.9F));
-            } else if (frequency <= 5) {
+            } else if (frequency < 5) {
                 temp.add(new Entry(4F, 20.2F));
             } else {
                 temp.add(new Entry(5F, 1.3F));
@@ -221,7 +300,7 @@ public class StatisActivity extends AppCompatActivity {
                 temp.add(new Entry(1F, 33.5F));
             } else if (frequency <= 3) {
                 temp.add(new Entry(2F, 26.9F));
-            } else if (frequency <= 5) {
+            } else if (frequency < 5) {
                 temp.add(new Entry(4F, 13.8F));
             } else {
                 temp.add(new Entry(5F, 1.1F));

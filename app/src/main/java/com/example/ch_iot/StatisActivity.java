@@ -68,10 +68,46 @@ public class StatisActivity extends AppCompatActivity {
         frequency = sharedPreferences2.getInt("fre", 0);
         average = sharedPreferences2.getInt("aver", 0);
 
+        statisLineChart.setVisibility(View.VISIBLE);
+        statisLineChart.invalidate();
+        setBtn1(gender, average);
+        statisLayout1.setVisibility(View.VISIBLE);
+        statisLabelName.setText(name);
+        statisLabel1.setText(String.valueOf(average));
+        statisLayout2.setVisibility(View.VISIBLE);
+
+        if (gender.equals("남")) {
+            if (average <= 2) {
+                statisLabel2.setText(String.valueOf(14.9)+"%");
+            } else if (average <= 4) {
+                statisLabel2.setText(String.valueOf(26.2)+"%");
+            } else if (average <= 6) {
+                statisLabel2.setText(String.valueOf(21.3)+"%");
+            } else if (average <= 9) {
+                statisLabel2.setText(String.valueOf(17.9)+"%");
+            } else {
+                statisLabel2.setText(String.valueOf(19.8)+"%");
+            }
+        } else if (gender.equals("여")) {
+            if (average <= 2) {
+                statisLabel2.setText(String.valueOf(30.6)+"%");
+            } else if (average <= 4) {
+                statisLabel2.setText(String.valueOf(30.2)+"%");
+            } else if (average <= 6) {
+                statisLabel2.setText(String.valueOf(17.4)+"%");
+            } else if (average <= 9) {
+                statisLabel2.setText(String.valueOf(10.6)+"%");
+            } else {
+                statisLabel2.setText(String.valueOf(11.2)+"%");
+            }
+        }
+
         statisBtn1.setOnClickListener(v -> {
             statisLineChart.setVisibility(View.VISIBLE);
             statisLineChart.invalidate();
             setBtn1(gender, average);
+            statisText1.setText("님은 술자리에서 평균 약 ");
+            statisText2.setText("잔의 술을 마시며");
             statisLayout1.setVisibility(View.VISIBLE);
             statisLabelName.setText(name);
             statisLabel1.setText(String.valueOf(average));
@@ -118,11 +154,11 @@ public class StatisActivity extends AppCompatActivity {
             if (gender.equals("남")) {
                 if (frequency == 0) {
                     statisLabel2.setText(String.valueOf(18.1) + "%");
-                } else if (frequency <= 1) {
-                    statisLabel2.setText(String.valueOf(29.5) + "%");
                 } else if (frequency <= 3) {
+                    statisLabel2.setText(String.valueOf(29.5) + "%");
+                } else if (frequency <= 6) {
                     statisLabel2.setText(String.valueOf(30.9) + "%");
-                } else if (frequency < 5) {
+                } else if (frequency <= 9) {
                     statisLabel2.setText(String.valueOf(20.2) + "%");
                 } else {
                     statisLabel2.setText(String.valueOf(1.3) + "%");
@@ -130,11 +166,11 @@ public class StatisActivity extends AppCompatActivity {
             } else if (gender.equals("여")) {
                 if (frequency == 0) {
                     statisLabel2.setText(String.valueOf(24.7) + "%");
-                } else if (frequency <= 1) {
-                    statisLabel2.setText(String.valueOf(33.5) + "%");
                 } else if (frequency <= 3) {
+                    statisLabel2.setText(String.valueOf(33.5) + "%");
+                } else if (frequency <= 6) {
                     statisLabel2.setText(String.valueOf(26.9) + "%");
-                } else if (frequency < 5) {
+                } else if (frequency <= 9) {
                     statisLabel2.setText(String.valueOf(13.8) + "%");
                 } else {
                     statisLabel2.setText(String.valueOf(1.1) + "%");
@@ -250,10 +286,10 @@ public class StatisActivity extends AppCompatActivity {
 
         List<Entry> manyMan = new ArrayList<>();
         manyMan.add(new Entry(0F, 18.1F));
-        manyMan.add(new Entry(1F, 29.5F));
-        manyMan.add(new Entry(2F, 30.9F));
-        manyMan.add(new Entry(4F, 20.2F));
-        manyMan.add(new Entry(5F, 1.3F));
+        manyMan.add(new Entry(3F, 29.5F));
+        manyMan.add(new Entry(6F, 30.9F));
+        manyMan.add(new Entry(9F, 20.2F));
+        manyMan.add(new Entry(12F, 1.3F));
 
         LineDataSet set1 = new LineDataSet(manyMan, "남성");
         set1.setColor(Color.rgb(103, 132, 145));
@@ -266,10 +302,10 @@ public class StatisActivity extends AppCompatActivity {
 
         List<Entry> manyWoman = new ArrayList<>();
         manyWoman.add(new Entry(0F, 24.7F));
-        manyWoman.add(new Entry(1F, 33.5F));
-        manyWoman.add(new Entry(2F, 26.9F));
-        manyWoman.add(new Entry(4F, 13.8F));
-        manyWoman.add(new Entry(5F, 1.1F));
+        manyWoman.add(new Entry(3F, 33.5F));
+        manyWoman.add(new Entry(6F, 26.9F));
+        manyWoman.add(new Entry(9F, 13.8F));
+        manyWoman.add(new Entry(12F, 1.1F));
 
         LineDataSet set2 = new LineDataSet(manyWoman, "여성");
         set2.setColor(Color.rgb(255, 165, 0));
@@ -284,26 +320,26 @@ public class StatisActivity extends AppCompatActivity {
         if (gender.equals("남")) {
             if (frequency == 0) {
                 temp.add(new Entry(0F, 18.1F));
-            } else if (frequency <= 1) {
-                temp.add(new Entry(1F, 29.5F));
             } else if (frequency <= 3) {
-                temp.add(new Entry(2F, 30.9F));
-            } else if (frequency < 5) {
-                temp.add(new Entry(4F, 20.2F));
+                temp.add(new Entry(3F, 29.5F));
+            } else if (frequency <= 6) {
+                temp.add(new Entry(6F, 30.9F));
+            } else if (frequency <= 9) {
+                temp.add(new Entry(9F, 20.2F));
             } else {
-                temp.add(new Entry(5F, 1.3F));
+                temp.add(new Entry(12F, 1.3F));
             }
         } else if (gender.equals("여")) {
             if (frequency == 0) {
                 temp.add(new Entry(0F, 24.7F));
-            } else if (frequency <= 1) {
-                temp.add(new Entry(1F, 33.5F));
             } else if (frequency <= 3) {
-                temp.add(new Entry(2F, 26.9F));
-            } else if (frequency < 5) {
-                temp.add(new Entry(4F, 13.8F));
+                temp.add(new Entry(3F, 33.5F));
+            } else if (frequency <= 6) {
+                temp.add(new Entry(6F, 26.9F));
+            } else if (frequency <= 9) {
+                temp.add(new Entry(9F, 13.8F));
             } else {
-                temp.add(new Entry(5F, 1.1F));
+                temp.add(new Entry(12F, 1.1F));
             }
         }
 
@@ -319,15 +355,15 @@ public class StatisActivity extends AppCompatActivity {
 
         XAxis xAxis = statisLineChart.getXAxis();
         xAxis.setAxisMinimum(0F);
-        xAxis.setAxisMaximum(5F);
-        xAxis.setGranularity(1F);
+        xAxis.setAxisMaximum(12F);
+        xAxis.setGranularity(3F);
         xAxis.setLabelCount(10);
         xAxis.setDrawLabels(true);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setValueFormatter(new ValueFormatter() {
             @Override
             public String getFormattedValue(float value) {
-                return (int) value + "회 이상";
+                return (int) value + "회 이하";
             }
         });
 

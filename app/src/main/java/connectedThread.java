@@ -15,8 +15,6 @@ public class connectedThread extends Thread {
         InputStream tmpIn = null;
         OutputStream tmpOut = null;
 
-        // Get the input and output streams, using temp objects because
-        // member streams are final
         try {
             tmpIn = socket.getInputStream();
             tmpOut = socket.getOutputStream();
@@ -29,18 +27,16 @@ public class connectedThread extends Thread {
 
     @Override
     public void run() {
-        byte[] buffer = new byte[1024];  // buffer store for the stream
-        int bytes; // bytes returned from read()
-        // Keep listening to the InputStream until an exception occurs
+        byte[] buffer = new byte[1024];
+        int bytes;
         while (true) {
             try {
-                // Read from the InputStream
                 bytes = mmInStream.available();
                 if (bytes != 0) {
                     buffer = new byte[1024];
-                    SystemClock.sleep(100); //pause and wait for rest of data. Adjust this depending on your sending speed.
-                    bytes = mmInStream.available(); // how many bytes are ready to be read?
-                    bytes = mmInStream.read(buffer, 0, bytes); // record how many bytes we actually read
+                    SystemClock.sleep(100);
+                    bytes = mmInStream.available();
+                    bytes = mmInStream.read(buffer, 0, bytes);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -50,16 +46,14 @@ public class connectedThread extends Thread {
         }
     }
 
-    /* Call this from the main activity to send data to the remote device */
     public void write(String input) {
-        byte[] bytes = input.getBytes();           //converts entered String into bytes
+        byte[] bytes = input.getBytes();
         try {
             mmOutStream.write(bytes);
         } catch (IOException e) {
         }
     }
 
-    /* Call this from the main activity to shutdown the connection */
     public void cancel() {
         try {
             mmSocket.close();

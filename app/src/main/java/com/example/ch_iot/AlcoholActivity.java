@@ -231,28 +231,28 @@ public class AlcoholActivity extends AppCompatActivity {
 
                                             textviewAlcoholText.setText(alcoholContentStr);
 
-                                            // 0.00
+
                                             if (alcoholContent == 0.00) {
                                                 back.setBackgroundResource(R.drawable.gradient_none);
                                                 nowState.setImageResource(R.drawable.none);
                                                 nowState.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                                                 textviewAlcoholText.setText(alcoholContentStr);
                                             }
-                                            // 0.00초과 ~ 0.02이하
+
                                             if (alcoholContent > 0.00) {
                                                 back.setBackgroundResource(R.drawable.gradient_low);
                                                 nowState.setImageResource(R.drawable.low);
                                                 nowState.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                                                 textviewAlcoholText.setText(alcoholContentStr);
                                             }
-                                            // 0.02초과 ~ 0.05이하
+
                                             if (alcoholContent >= 0.02) {
                                                 back.setBackgroundResource(R.drawable.gradient_middle);
                                                 nowState.setImageResource(R.drawable.middle);
                                                 nowState.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                                                 textviewAlcoholText.setText(alcoholContentStr);
                                             }
-                                            // 0.05 초과
+
                                             if (alcoholContent > 0.05) {
                                                 back.setBackgroundResource(R.drawable.gradient_high);
                                                 nowState.setImageResource(R.drawable.high);

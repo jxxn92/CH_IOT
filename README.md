@@ -2,11 +2,11 @@
 
 ## 팀원소개
 
-|                                             팀장 박준걸                                              |                                                 팀원 박창욱                                                  |                                                 팀원 홍서경                                                  |
-| :--------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-| <img alt="박준걸프로필" src="https://avatars.githubusercontent.com/jxxn92" width="200" height="200"> | <img width="200" height="200" alt="박창욱프로필" src="https://avatars.githubusercontent.com/(깃허브닉네임)"> | <img width="200" height="200" alt="홍서경프로필" src="https://avatars.githubusercontent.com/(깃허브닉네임)"> |
-|                                             - 코드 구현                                              |                                                    - 팀원                                                    |                                                    - 팀원                                                    |
-|                                [🔗깃허브](https://github.com/jxxn92)                                 |                               [🔗깃허브](<https://github.com/(깃허브닉네임)>)                                |                               [🔗깃허브](<https://github.com/(깃허브닉네임)>)                                |
+|                                             팀장 박준걸                                              |                                                 팀원 박창욱                                                  |                                              팀원 홍서경                                              |
+| :--------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+| <img alt="박준걸프로필" src="https://avatars.githubusercontent.com/jxxn92" width="200" height="200"> | <img width="200" height="200" alt="박창욱프로필" src="https://avatars.githubusercontent.com/(깃허브닉네임)"> | <img width="200" height="200" alt="홍서경프로필" src="https://avatars.githubusercontent.com/hsk1587"> |
+|                                             - 코드 구현                                              |                                                    - 팀원                                                    |                                                - 팀원                                                 |
+|                                [🔗깃허브](https://github.com/jxxn92)                                 |                               [🔗깃허브](<https://github.com/(깃허브닉네임)>)                                |                                [🔗깃허브](https://github.com/hsk1587)                                 |
 
 <br>
 
@@ -50,7 +50,7 @@
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 OFF 상태> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 ON 상태>
 
-<br>
+<br><br><br>
 
 > 알코올 측정
 

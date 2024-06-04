@@ -48,7 +48,7 @@
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/fe34948e-819c-40d9-a17f-997cef298c6b" alt="blue_on" width="200" height="400"/>
 
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 OFF 상태> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 ON 상태>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 OFF 상태> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 ON 상태>
 
 <br>
 

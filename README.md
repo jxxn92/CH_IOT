@@ -37,8 +37,8 @@
 
 > 로그인 및 회원 가입
 
-<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/6c39bb9d-bebb-4b20-af56-44af8547a7b6" alt="register"/>
-<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/d75dd30a-0b6f-4406-8913-b8ef5c1c3a9f" alt="login"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/6c39bb9d-bebb-4b20-af56-44af8547a7b6" alt="register" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/d75dd30a-0b6f-4406-8913-b8ef5c1c3a9f" alt="login" width="200" height="400"/>
 
 <br>
 

@@ -35,12 +35,14 @@
 
 ## 구현 이미지
 
+<br>
+
 > 로그인 및 회원 가입
 
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/6c39bb9d-bebb-4b20-af56-44af8547a7b6" alt="register" width="200" height="400"/>
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/d75dd30a-0b6f-4406-8913-b8ef5c1c3a9f" alt="login" width="200" height="400"/>
 
-<br>
+<br><br>
 
 > 블루투스 연결
 
@@ -48,9 +50,9 @@
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/fe34948e-819c-40d9-a17f-997cef298c6b" alt="blue_on" width="200" height="400"/>
 
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 OFF 상태> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 ON 상태>
+　<블루투스 OFF 상태>　　　<블루투스 ON 상태>
 
-<br><br><br>
+<br><br>
 
 > 알코올 측정
 

@@ -5,7 +5,7 @@
 |                                             팀장 박준걸                                              |                                                 팀원 박창욱                                                  |                                              팀원 홍서경                                              |
 | :--------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
 | <img alt="박준걸프로필" src="https://avatars.githubusercontent.com/jxxn92" width="200" height="200"> | <img width="200" height="200" alt="박창욱프로필" src="https://avatars.githubusercontent.com/(깃허브닉네임)"> | <img width="200" height="200" alt="홍서경프로필" src="https://avatars.githubusercontent.com/hsk1587"> |
-|                                             - 코드 구현                                              |                                                    - 팀원                                                    |                                                - 팀원                                                 |
+|                                             - 코드 구현<br>- 버그 수정                                              |                                                    - 데이터 수집<br>- 데이터 분석                                                    |                                                - UI 구성<br>- 보고서 작성                                                 |
 |                                [🔗깃허브](https://github.com/jxxn92)                                 |                               [🔗깃허브](<https://github.com/(깃허브닉네임)>)                                |                                [🔗깃허브](https://github.com/hsk1587)                                 |
 
 <br>
@@ -58,6 +58,9 @@
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/b4ca0ea0-02ac-49eb-8541-00dfd555b5fb" alt="0.02 이하" width="200" height="400"/>
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/55270137-adb5-4ad1-b734-4eddf79e5ca6" alt="0.05 이하" width="200" height="400"/>
 <img src="https://github.com/jxxn92/jxxn92/assets/116718062/27febc8b-1e22-4f61-88e7-d150dab35fdb" alt="그 외" width="200" height="400"/>
+
+<br>
+　　　<측정치 0.00>　　　　　<측정치 0.02 이하>　　　　<측정치 0.05 이하>　　　　　<측정치 그 외>
 
 <img src="" alt=""/>
 <img src="" alt=""/>

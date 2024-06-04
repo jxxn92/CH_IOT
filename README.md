@@ -33,6 +33,40 @@
 
 <br>
 
+## 구현 이미지
+
+> 로그인 및 회원 가입
+
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/6c39bb9d-bebb-4b20-af56-44af8547a7b6" alt="register"/>
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/d75dd30a-0b6f-4406-8913-b8ef5c1c3a9f" alt="login"/>
+
+<br>
+
+> 블루투스 연결
+
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/0d04138b-ed6b-450f-83be-c17cc649bc93" alt="blue_off"/>
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/fe34948e-819c-40d9-a17f-997cef298c6b" alt="blue_on"/>
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 OFF 상태> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<블루투스 ON 상태>
+
+<br>
+
+> 알코올 측정
+
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/2e9d538b-11a0-4fe2-b1d1-2a3ad88eeee9" alt="0.00"/>
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/b4ca0ea0-02ac-49eb-8541-00dfd555b5fb" alt="0.02 이하"/>
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/55270137-adb5-4ad1-b734-4eddf79e5ca6" alt="0.05 이하"/>
+<img style="width:200" src="https://github.com/jxxn92/jxxn92/assets/116718062/27febc8b-1e22-4f61-88e7-d150dab35fdb" alt="그 외"/>
+
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+<img style="width:200" src="" alt=""/>
+
 <br>
 
 ### 프로젝트 구조

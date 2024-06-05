@@ -194,9 +194,4 @@
  ┃ ┃ ┃ ┗ 📜data_extraction_rules.xml
  ┃ ┗ 📜AndroidManifest.xml
  ┗ 📂test
- ┃ ┗ 📂jav ┃ ┃ ┗ 📂com
- ┃ ┃ ┃ ┗ 📂example
- ┃ ┃ ┃ ┃ ┗ 📂ch_iot
- ┃ ┃ ┃ ┃ ┃ ┗ 📜ExampleUnitTest.java
-
 ```

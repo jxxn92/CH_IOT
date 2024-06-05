@@ -5,7 +5,7 @@
 |                                             팀장 박준걸                                              |                                                 팀원 박창욱                                                  |                                              팀원 홍서경                                              |
 | :--------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
 | <img alt="박준걸프로필" src="https://avatars.githubusercontent.com/jxxn92" width="200" height="200"> | <img width="200" height="200" alt="박창욱프로필" src="https://avatars.githubusercontent.com/(깃허브닉네임)"> | <img width="200" height="200" alt="홍서경프로필" src="https://avatars.githubusercontent.com/hsk1587"> |
-|                                             - 코드 구현<br>- 버그 수정                                              |                                                    - 데이터 수집<br>- 데이터 분석                                                    |                                                - UI 구성<br>- 보고서 작성                                                 |
+|                                      - 코드 구현<br>- 버그 수정                                      |                                        - 데이터 수집<br>- 데이터 분석                                        |                                      - UI 구성<br>- 보고서 작성                                       |
 |                                [🔗깃허브](https://github.com/jxxn92)                                 |                               [🔗깃허브](<https://github.com/(깃허브닉네임)>)                                |                                [🔗깃허브](https://github.com/hsk1587)                                 |
 
 <br>
@@ -64,13 +64,32 @@
 <br>
 　　　<측정치 0.00>　　　　　<측정치 0.02 이하>　　　　<측정치 0.05 이하>　　　　　<측정치 그 외>
 
-<img src="" alt=""/>
-<img src="" alt=""/>
-<img src="" alt=""/>
-<img src="" alt=""/>
-<img src="" alt=""/>
-<img src="" alt=""/>
-<img src="" alt=""/>
+> 혈중 알코올 농도, 알코올 분해시간 계산
+
+<br>
+
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/c6cc2309-50ad-4f45-9cb9-00c142ced6f3" alt="계산 입력창" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/8f7cd539-9126-4ca0-84c3-5a2961875152" alt="결과" width="200" height="400"/>
+
+<br><br>
+
+> 음주 빈도, 정도 통계
+
+<br>
+
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/3f863aa5-d8c3-435e-91e3-ff3b7f18fd74" alt="" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/cdb0c0a1-b60a-4e6e-a3a4-f52ed81ded9e" alt="" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/1b7f2f70-992d-4775-a82a-e78602f04aac" alt="" width="200" height="400"/>
+
+<br><br>
+
+> 사용자 통계 및 부가 정보
+
+<br>
+
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/4ce69dae-a95c-456f-b84f-d13d258d3750" alt="" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/b3baa531-c767-4ce4-98ac-582ca8f98a40" alt="" width="200" height="400"/>
+<img src="https://github.com/jxxn92/jxxn92/assets/116718062/d3336d8d-9686-47cd-8bf4-034cc65829d1" alt="" width="200" height="400"/>
 
 <br>
 

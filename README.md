@@ -107,91 +107,25 @@
  ┃ ┃ ┗ 📂com
  ┃ ┃ ┃ ┗ 📂example
  ┃ ┃ ┃ ┃ ┗ 📂ch_iot
- ┃ ┃ ┃ ┃ ┃ ┗ 📜ExampleInstrumentedTest.java
  ┣ 📂main
  ┃ ┣ 📂java
  ┃ ┃ ┣ 📂com
  ┃ ┃ ┃ ┗ 📂example
  ┃ ┃ ┃ ┃ ┗ 📂ch_iot
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AdditionalActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AlcoholActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜BackPressCloseHandler.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜InfoActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜MainActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜RegisterActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SQLiteHelper.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜StatisActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜TempActivity.java
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ViewActivity1.java
- ┃ ┃ ┃ ┃ ┃ ┗ 📜ViewActivity2.java
- ┃ ┃ ┗ 📜connectedThread.java
  ┃ ┣ 📂res
  ┃ ┃ ┣ 📂drawable
- ┃ ┃ ┃ ┣ 📜bluetooth.png
- ┃ ┃ ┃ ┣ 📜button_back.xml
- ┃ ┃ ┃ ┣ 📜edit_round.xml
- ┃ ┃ ┃ ┣ 📜gradient_disconnect.xml
- ┃ ┃ ┃ ┣ 📜gradient_high.xml
- ┃ ┃ ┃ ┣ 📜gradient_low.xml
- ┃ ┃ ┃ ┣ 📜gradient_middle.xml
- ┃ ┃ ┃ ┣ 📜gradient_none.xml
- ┃ ┃ ┃ ┣ 📜high.png
- ┃ ┃ ┃ ┣ 📜ic_cal.png
- ┃ ┃ ┃ ┣ 📜ic_home.png
- ┃ ┃ ┃ ┣ 📜ic_info.png
- ┃ ┃ ┃ ┣ 📜ic_launcher_background.xml
- ┃ ┃ ┃ ┣ 📜ic_statis.png
- ┃ ┃ ┃ ┣ 📜img_1.jpg
- ┃ ┃ ┃ ┣ 📜img_2.jpg
- ┃ ┃ ┃ ┣ 📜img_3.jpg
- ┃ ┃ ┃ ┣ 📜low.png
- ┃ ┃ ┃ ┣ 📜middle.png
- ┃ ┃ ┃ ┣ 📜none.png
- ┃ ┃ ┃ ┗ 📜view_round.xml
  ┃ ┃ ┣ 📂drawable-v24
- ┃ ┃ ┃ ┗ 📜ic_launcher_foreground.xml
  ┃ ┃ ┣ 📂font
- ┃ ┃ ┃ ┣ 📜bmju.ttf
- ┃ ┃ ┃ ┗ 📜fontfamily.xml
  ┃ ┃ ┣ 📂layout
- ┃ ┃ ┃ ┣ 📜activity_additional.xml
- ┃ ┃ ┃ ┣ 📜activity_alcohol.xml
- ┃ ┃ ┃ ┣ 📜activity_info.xml
- ┃ ┃ ┃ ┣ 📜activity_main.xml
- ┃ ┃ ┃ ┣ 📜activity_register.xml
- ┃ ┃ ┃ ┣ 📜activity_statis.xml
- ┃ ┃ ┃ ┣ 📜activity_temp.xml
- ┃ ┃ ┃ ┣ 📜activity_view1.xml
- ┃ ┃ ┃ ┣ 📜activity_view2.xml
- ┃ ┃ ┃ ┗ 📜custom_alert_dialog.xml
  ┃ ┃ ┣ 📂menu
  ┃ ┃ ┣ 📂mipmap-anydpi-v26
- ┃ ┃ ┃ ┣ 📜ic_launcher.xml
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.xml
  ┃ ┃ ┣ 📂mipmap-hdpi
- ┃ ┃ ┃ ┣ 📜ic_launcher.webp
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.webp
  ┃ ┃ ┣ 📂mipmap-mdpi
- ┃ ┃ ┃ ┣ 📜ic_launcher.webp
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.webp
  ┃ ┃ ┣ 📂mipmap-xhdpi
- ┃ ┃ ┃ ┣ 📜ic_launcher.webp
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.webp
  ┃ ┃ ┣ 📂mipmap-xxhdpi
- ┃ ┃ ┃ ┣ 📜ic_launcher.webp
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.webp
  ┃ ┃ ┣ 📂mipmap-xxxhdpi
- ┃ ┃ ┃ ┣ 📜ic_launcher.webp
- ┃ ┃ ┃ ┗ 📜ic_launcher_round.webp
  ┃ ┃ ┣ 📂values
- ┃ ┃ ┃ ┣ 📜colors.xml
- ┃ ┃ ┃ ┣ 📜strings.xml
- ┃ ┃ ┃ ┗ 📜themes.xml
  ┃ ┃ ┣ 📂values-night
- ┃ ┃ ┃ ┗ 📜themes.xml
  ┃ ┃ ┗ 📂xml
- ┃ ┃ ┃ ┣ 📜backup_rules.xml
- ┃ ┃ ┃ ┗ 📜data_extraction_rules.xml
- ┃ ┗ 📜AndroidManifest.xml
  ┗ 📂test
 ```
